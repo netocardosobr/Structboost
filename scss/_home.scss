@@ -179,7 +179,7 @@ header {
 
 .domine {
     width: 100%;
-    height: 730px;
+    height: 1186px;
         .container.itens {
             margin-top: 64px;
             .top {
@@ -203,7 +203,8 @@ header {
             }
             .bot {
                 display: grid;
-                grid-template-columns: 1fr 1fr ;
+                grid-template-areas: "primeiro primeiro segundo"
+                "terceiro quarto quinto";
                 gap: 20px;
                 .card {
                     width: 100%;
@@ -243,6 +244,21 @@ header {
                         max-width: 482px;
                         margin-top: 8px;
                     }
+                }
+                .card.primeiro {
+                    grid-area: primeiro;
+                }
+                .card.segundo {
+                    grid-area: segundo;
+                }
+                .card.terceiro {
+                    grid-area: terceiro;
+                }
+                .card.quarto {
+                    grid-area: quarto;   
+                }
+                .card.quinto {
+                    grid-area: quinto;
                 }
             }
         }
@@ -295,7 +311,7 @@ header {
 footer {
     width: 100%;
     height: 390px;
-    .container {
+    .container.itens {
         padding: 48px 0px 64px 0px;
         display: flex;
         align-items: flex-start;
@@ -337,4 +353,8 @@ footer {
             }
             }
     }
+    .container {
+    padding: 0px;
+    margin-top: 24px;
+}
 }
